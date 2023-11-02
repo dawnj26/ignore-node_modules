@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Tailwind 101</title>
+  </head>
+  <body class="h-screen bg-[#18191a]">
+    <!-- Navigation bar -->
+    <header
+      class="bg-[#242526] px-4 py-2 min-h-min grid lg:grid-cols-[1fr_2fr_1fr] grid-cols-[1fr_1fr]"
+    >
+      <!-- Logo and search -->
+      <div class="">
+        <div class="flex gap-2">
+          <!-- Logo -->
+          <img src="/images/facebook.svg" alt="facebook logo" class="h-10" />
+          <!-- Search -->
+          <div class="bg-[#3a3b3c] rounded-full flex gap-2 items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="fill-gray-400 h-4 ml-3 max-sm:mx-3"
+            >
+              <path
+                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+              />
+            </svg>
+            <input
+              type="text"
+              name="search"
+              id="search"
+              class="h-10 pl-1 pr-4 pb-0.5 min-w-min text-white focus:outline-none align-middle bg-transparent placeholder:text-gray-300 max-sm:hidden"
+              placeholder="Search Facebook"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <ul class="gap-2 justify-between lg:flex hidden [&>li]:flex-1 w-full">
+        <li>
+          <div
+            class="grid place-items-center h-full hover:bg-slate-700 rounded"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 576 512"
+              class="fill-gray-300 h-5"
+            >
+              <path
+                d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c.2 35.5-28.5 64.3-64 64.3H128.1c-35.3 0-64-28.7-64-64V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24zM352 224a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zm-96 96c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H256z"
+              />
+            </svg>
+          </div>
+        </li>
+        <li>
+          <div
+            class="grid place-items-center h-full hover:bg-slate-700 rounded"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 448 512"
+              class="fill-gray-300 h-5"
+            >
+              <path
+                d="M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32V64 368 480c0 17.7 14.3 32 32 32s32-14.3 32-32V352l64.3-16.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30V66.1c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L64 48V32z"
+              />
+            </svg>
+          </div>
+        </li>
+        <li>
+          <div
+            class="grid place-items-center h-full hover:bg-slate-700 rounded"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 640 512"
+              class="fill-gray-300 h-5"
+            >
+              <path
+                d="M64 64V352H576V64H64zM0 64C0 28.7 28.7 0 64 0H576c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zM128 448H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32-14.3-32-32s14.3-32 32-32z"
+              />
+            </svg>
+          </div>
+        </li>
+        <li>
+          <div
+            class="grid place-items-center h-full hover:bg-slate-700 rounded"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 576 512"
+              class="fill-gray-300 h-5"
+            >
+              <path
+                d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0H109.6C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9l-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3V384H128V250.6c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3V384v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V384 252.6c-4 1-8 1.8-12.3 2.3z"
+              />
+            </svg>
+          </div>
+        </li>
+        <li>
+          <div
+            class="grid place-items-center h-full hover:bg-slate-700 rounded"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 640 512"
+              class="fill-gray-300 h-5"
+            >
+              <path
+                d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z"
+              />
+            </svg>
+          </div>
+        </li>
+      </ul>
+
+      <div class="h-full justify-self-end flex gap-2">
+        <div
+          class="h-full w-10 grid place-items-center rounded-full bg-[#3a3b3c] hover:bg-[#4e4f50]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 448 512"
+            class="h-5 fill-[#e7e9ed]"
+          >
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M128 136c0-22.1-17.9-40-40-40L40 96C17.9 96 0 113.9 0 136l0 48c0 22.1 17.9 40 40 40H88c22.1 0 40-17.9 40-40l0-48zm0 192c0-22.1-17.9-40-40-40H40c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40H88c22.1 0 40-17.9 40-40V328zm32-192v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V136c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM288 328c0-22.1-17.9-40-40-40H200c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V328zm32-192v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V136c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM448 328c0-22.1-17.9-40-40-40H360c-22.1 0-40 17.9-40 40v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V328z"
+            />
+          </svg>
+        </div>
+        <div
+          class="h-full w-10 grid place-items-center rounded-full bg-[#3a3b3c] hover:bg-[#4e4f50]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 512 512"
+            class="h-4 fill-[#e7e9ed]"
+          >
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"
+            />
+          </svg>
+        </div>
+
+        <div
+          class="h-full w-10 grid place-items-center rounded-full bg-[#3a3b3c] hover:bg-[#4e4f50]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 448 512"
+            class="h-5 fill-[#e7e9ed]"
+          >
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"
+            />
+          </svg>
+        </div>
+        <div
+          class="h-full w-10 grid place-items-center rounded-full bg-[#3a3b3c] hover:bg-[#4e4f50]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 448 512"
+            class="fill-[#e7e9ed]"
+          >
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
+    <!-- Navigation bar end-->
+  </body>
+</html>
